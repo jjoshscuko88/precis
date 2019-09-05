@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../../css/solarized-dark.css">
+  <link rel="stylesheet" href="../../../css/index.css">
+  <script src="../../../js/jquery.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+          crossorigin="anonymous"></script>
+  <script src="../../../js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../js/index.js"></script>
+</head>
+<body>
+<div class="app">
+
+  <div class="app__content">
+
+    <div class="app__limiter card">
+
+      <div class="breadcrumb">
+        <h1>Типы данных</h1>
+        <a href="../../main.html">В меню</a>
+      </div>
+
+      <section>
+
+        <h2>Число</h2>
+        <pre><code>
+          let n = 123;
+          n = 12.345;
+        </code></pre>
+        <p>Числовой тип данных (number) представляет как целочисленные значения, так и числа с плавающей точкой.</p>
+        <p>Кроме обычных чисел, существуют так называемые «специальные числовые значения», которые относятся к этому типу данных: <span class="beige">Infinity, -Infinity и NaN.</span></p>
+        <p><span class="beige">Infinity</span> представляет собой математическую бесконечность ∞. Это особое значение, которое больше любого числа.</p>
+        <pre><code>
+          alert( 1 / 0 ); // Infinity
+
+          alert( Infinity ); // Infinity
+        </code></pre>
+        <p><span class="beige">NaN</span> означает вычислительную ошибку. Это результат неправильной или неопределённой математической операции, например:</p>
+        <pre><code>
+          alert( "не число" / 2 ); // NaN, такое деление является ошибкой
+        </code></pre>
+        <p>Значение <span class="beige">NaN</span> «прилипчиво». Любая операция с <span class="beige">NaN</span> возвращает <span class="beige">NaN</span>:</p>
+        <pre><code>
+          alert( "не число" / 2 + 5 ); // NaN
+        </code></pre>
+        <p>Если где-то в математическом выражении есть NaN, то результатом вычислений с его участием будет NaN.</p>
+      </section>
+
+      <section>
+        Строка
+        <p>Строка (string) в JavaScript должна быть заключена в кавычки.</p>
+        <pre><code>
+          let str = "Привет";
+          let str2 = 'Одинарные кавычки тоже подойдут';
+          let phrase = `Обратные кавычки позволяют встраивать переменные ${str}`;
+        </code></pre>
+        <p>В JavaScript существует три типа кавычек.</p>
+        <p>
+          Двойные кавычки: "Привет". <br>
+          Одинарные кавычки: 'Привет'. <br>
+          Обратные кавычки: `Привет`. <br>
+          Двойные или одинарные кавычки являются «простыми», между ними нет разницы в JavaScript. <br>
+        </p>
+        <p>Обратные кавычки же имеют «расширенный функционал». Они позволяют нам встраивать выражения в строку, заключая их в ${…}. Например:</p>
+        <pre><code>
+          let name = "Иван";
+
+          // Вставим переменную
+          alert( `Привет, ${name}!` ); // Привет, Иван!
+
+          // Вставим выражение
+          alert( `результат: ${1 + 2}` ); // результат: 3
+        </code></pre>
+      </section>
+
+      <section>
+
+        <h2>Булевый (логический) тип</h2>
+        <p>Булевый тип (boolean) может принимать только два значения: <span class="beige">true</span> (истина) и <span class="beige">false</span> (ложь).</p>
+        <p>Такой тип, как правило, используется для хранения значений да/нет: true значит «да, правильно», а false значит «нет, не правильно».</p>
+        <p>Например:</p>
+        <pre><code>
+          let nameFieldChecked = true; // да, поле отмечено
+          let ageFieldChecked = false; // нет, поле не отмечено
+        </code></pre>
+        Булевые значения также могут быть результатом сравнений:
+        <pre><code>
+          let isGreater = 4 > 1;
+
+          alert( isGreater ); // true (результатом сравнения будет "да")
+        </code></pre>
+
+      </section>
+
+      <section>
+
+        <h2>Значение «null»</h2>
+        <p>Специальное значение <span class="beige">null</span> не относится ни к одному из типов, описанных выше.</p>
+        <p>Оно формирует отдельный тип, который содержит только значение <span class="beige">null:</span></p>
+        <pre><code>
+          let age = null;
+        </code></pre>
+        <p>В JavaScript <span class="beige">null</span> не является «ссылкой на несуществующий объект» или «нулевым указателем», как в некоторых других языках.</p>
+        <p>Это просто специальное значение, которое представляет собой «ничего», «пусто» или «значение неизвестно».</p>
+
+      </section>
+
+      <section>
+
+        <h2>Значение «undefined»</h2>
+        <p>Специальное значение <span class="b">undefined</span> также стоит особняком. Оно формирует тип из самого себя так же, как и <span class="b">null</span>.</p>
+        <p>Оно означает, что «значение не было присвоено».</p>
+        <p>Если переменная объявлена, но ей не присвоено никакого значения, то её значением будет <span class="b">undefined</span>:</p>
+        <pre><code>
+          let x;
+
+          alert(x); // выведет "undefined"
+        </code></pre>
+
+      </section>
+
+      <section>
+
+        <h2>Оператор typeof</h2>
+        <p>Оператор typeof возвращает тип аргумента. Это полезно, когда мы хотим обрабатывать значения различных типов по-разному или просто хотим сделать проверку.</p>
+        <p>У него есть два синтаксиса:</p>
+        <p>Синтаксис оператора: typeof x.</p>
+        <p>Синтаксис функции: typeof(x).</p>
+        <p>Другими словами, он работает со скобками или без скобок. Результат одинаковый.</p>
+        <p>Вызов typeof x возвращает строку с именем типа:</p>
+        <pre><code>
+          typeof undefined // "undefined"
+
+          typeof 0 // "number"
+
+          typeof true // "boolean"
+
+          typeof "foo" // "string"
+
+          typeof Symbol("id") // "symbol"
+
+          typeof Math // "object"
+
+          typeof null // "object"
+
+          typeof alert // "function"
+        </code></pre>
+
+      </section>
+
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>

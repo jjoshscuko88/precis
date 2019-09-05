@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../../css/solarized-dark.css">
+  <link rel="stylesheet" href="../../../css/index.css">
+  <script src="../../../js/jquery.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+          crossorigin="anonymous"></script>
+  <script src="../../../js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../js/index.js"></script>
+</head>
+<body>
+<div class="app">
+
+  <div class="app__content">
+
+    <div class="app__limiter card">
+
+      <div class="breadcrumb">
+        <h1>Строгий режим — "use strict"</h1>
+        <a href="../../main.html">В меню</a>
+      </div>
+
+      <section>
+
+        <h2>«use strict»</h2>
+        <p>
+          Директива выглядит как строка: <span class="beige">"use strict"</span> или <span class="beige">'use strict'.</span> Когда она находится в начале скрипта, весь сценарий работает в «современном» режиме.
+          <br>
+          Например:
+        </p>
+        <pre><code>
+          "use strict";
+
+          // этот код работает в современном режиме
+          ...
+        </code></pre>
+
+      </section>
+
+      <section>
+
+        <h2>Всегда используйте «use strict»</h2>
+        <p>На данный момент достаточно иметь общее понимание об этом режиме:</p>
+        <ol>
+          <li>
+            Директива "use strict" переключает движок в «современный» режим, изменяя поведение некоторых встроенных функций. Позже в учебнике мы увидим подробности.
+          </li>
+          <li>
+            Строгий режим включается путём размещения "use strict" в начале скрипта или функции. Некоторые функции языка, такие как «классы» и «модули», автоматически включают строгий режим.
+          </li>
+          <li>
+            Строгий режим поддерживается всеми современными браузерами.
+          </li>
+          <li>
+            Мы рекомендуем всегда начинать скрипты с "use strict". Все примеры в этом руководстве предполагают строгий режим, если (очень редко) не указано иное.
+          </li>
+        </ol>
+
+      </section>
+
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>

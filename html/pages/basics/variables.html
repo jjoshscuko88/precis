@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../../css/solarized-dark.css">
+  <link rel="stylesheet" href="../../../css/index.css">
+  <script src="../../../js/jquery.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+          crossorigin="anonymous"></script>
+  <script src="../../../js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../js/index.js"></script>
+</head>
+<body>
+<div class="app">
+
+  <div class="app__content">
+
+    <div class="app__limiter card">
+
+      <div class="breadcrumb">
+        <h1>Переменные</h1>
+        <a href="../../main.html">В меню</a>
+      </div>
+
+      <section>
+
+        <h2>Переменная</h2>
+
+
+        <p>
+          Переменная – это «именованное хранилище» для данных. Мы можем использовать переменные для хранения товаров, посетителей и других данных.
+        </p>
+        <p>
+          Для создания переменной в JavaScript, используйте ключевое слово <span class="beige">let.</span>
+        </p>
+        <pre><code>
+          let user = 'John';
+          let age = 25;
+          let message = 'Hello';
+        </code></pre>
+        <p>Некоторые люди также определяют несколько переменных в таком вот многострочном стиле:</p>
+        <pre><code>
+          let user = 'John',
+              age = 25,
+              message = 'Hello';
+        </code></pre>
+        <p>Мы также можем объявить две переменные и скопировать данные из одной в другую.</p>
+        <pre><code>
+          let hello = 'Hello world!';
+
+          let message;
+
+          // копируем значение 'Hello world' из переменной hello в переменную message
+          message = hello;
+
+          // теперь две переменные содержат одинаковые данные
+          alert(hello); // Hello world!
+          alert(message); // Hello world!
+        </code></pre>
+
+      </section>
+
+      <section>
+        <h2>Константы</h2>
+        <p>Чтобы объявить константную, то есть, неизменяемую переменную, используйте <span class="beige">const</span> вместо <span class="beige">let</span>:</p>
+        <pre><code>
+          const myBirthday = '18.04.1982';
+        </code></pre>
+        <p>Переменные объявленные с помощью const, называются «константами». Их нельзя изменить. Попытка сделать это приведёт к ошибке:</p>
+        <pre><code>
+          const myBirthday = '18.04.1982';
+
+          myBirthday = '01.01.2001'; // ошибка, константу нельзя перезаписать!
+        </code></pre>
+        <p>Если программист уверен, что переменная никогда не будет меняться, он может гарантировать это и наглядно донести до каждого, объявив её через <span class="beige">const.</span></p>
+      </section>
+
+      <section>
+
+        <h2>Константы в верхнем регистре</h2>
+        <p>Широко распространена практика использования констант в качестве псевдонимов для трудно запоминаемых значений, которые известны до начала исполнения скрипта.</p>
+        <p>Названия таких констант пишутся с использованием заглавных букв и подчёркивания.</p>
+        <p>Для примера, сделаем константы для различных цветов в «шестнадцатиричном формате»:</p>
+        <pre><code>
+          const COLOR_RED = "#F00";
+          const COLOR_GREEN = "#0F0";
+          const COLOR_BLUE = "#00F";
+          const COLOR_ORANGE = "#FF7F00";
+
+          // ...когда нам нужно выбрать цвет
+          let color = COLOR_ORANGE;
+          alert(color); // #FF7F00
+        </code></pre>
+
+      </section>
+
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>

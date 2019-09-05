@@ -1,0 +1,219 @@
+/* line 1, _app.less */
+.app {
+  position: relative;
+  max-width: 1440px;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  background: #ffffff;
+  -webkit-box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+          box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+}
+/* line 14, _app.less */
+.app__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 100%;
+  margin: 0 auto;
+  background: beige;
+}
+/* line 23, _app.less */
+.app__limiter {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  position: relative;
+  width: 1220px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 20px 100px 20px;
+}
+/* line 3, _tags.less */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/* line 9, _tags.less */
+:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 3px #000;
+          box-shadow: 0 0 3px #000;
+}
+/* line 14, _tags.less */
+body {
+  background: #000412;
+  min-width: 320px;
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+/* line 22, _tags.less */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+p {
+  margin: 0 0 15px;
+}
+/* line 32, _tags.less */
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child,
+ul:last-child,
+ol:last-child,
+p:last-child {
+  margin-bottom: 0;
+}
+/* line 38, _tags.less */
+a:hover {
+  cursor: pointer;
+}
+/* line 43, _tags.less */
+input,
+button,
+select,
+textarea {
+  outline: none;
+  border: none;
+  padding: 0;
+}
+/* line 56, _tags.less */
+button {
+  cursor: pointer;
+  background: transparent;
+  -webkit-transition: background .7s;
+  transition: background .7s;
+}
+/* line 63, _tags.less */
+input[type=search]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+/* line 68, _tags.less */
+input[type=search]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+/* line 73, _tags.less */
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+/* line 81, _tags.less */
+ol,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+/* line 88, _tags.less */
+p {
+  margin: 0;
+}
+/* line 92, _tags.less */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* line 98, _tags.less */
+img {
+  display: block;
+}
+/* line 1, _classes.less */
+p {
+  margin-bottom: 5px;
+  padding-left: 20px;
+}
+/* line 6, _classes.less */
+.beige,
+.b {
+  background: beige;
+  font-weight: 700;
+}
+/* line 12, _classes.less */
+strong {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+/* line 17, _classes.less */
+section {
+  margin-bottom: 20px;
+}
+/* line 19, _classes.less */
+section:last-child {
+  margin-bottom: 0;
+}
+/* line 24, _classes.less */
+.breadcrumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/* line 29, _classes.less */
+.breadcrumb h1 {
+  font-size: 28px;
+}
+/* line 34, _classes.less */
+h2 {
+  font-size: 24px;
+  text-decoration: underline;
+}
+/* line 39, _classes.less */
+ol {
+  padding: 30px;
+}
+/* line 3, pages\_main.less */
+.main h1 {
+  margin: 0 0 40px;
+}
+/* line 8, pages\_main.less */
+.main__nav .btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 5px;
+}
+/* line 16, pages\_main.less */
+.main-link:hover {
+  color: #cb4b16;
+}
+/*# sourceMappingURL=index.css.map */
